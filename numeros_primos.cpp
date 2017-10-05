@@ -27,3 +27,4 @@ int main()
             cout<<"O numero eh primo";
         }
     }
+}
