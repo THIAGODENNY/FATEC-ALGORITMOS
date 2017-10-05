@@ -4,7 +4,7 @@
 int main()
 {
     using namespace std;
-    int confirmacao_primo=0, numero_verifcacao=0,i=0;
+    int confirmacao_primo=0, numero_verificacao=0,i=0;
     
     cout<<"Digite um numero a ser verificado como primo:";
     cin>>numero_verificacao;
