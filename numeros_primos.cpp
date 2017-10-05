@@ -7,7 +7,7 @@ int main()
     int confirmacao_primo=0, numero_verifcacao=0,i=0;
     
     cout<<"Digite um numero a ser verificado como primo:";
-    cint>>numero_verificacao;
+    cin>>numero_verificacao;
     i=numero_verificacao;
     for(;i==1;i--)
     {
