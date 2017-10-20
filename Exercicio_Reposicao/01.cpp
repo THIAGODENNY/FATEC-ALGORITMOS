@@ -1,21 +1,24 @@
 #include<iostream>
 #include<iomanip>
+#include <locale.h>
+
 using namespace std;
 
 
 int main()
 {
+	setlocale(LC_ALL, "Portuguese");
 	int a[30],c[30];
 	char b[30];
 	float d[30];
 	cout<<"********************************************************"<<endl;
 	cout<<"Utilize apenas os operadores + - / *"<<endl;
-	cout<<"Coloque a expressão de forma direta. Ex:1+1,33/4..."<<endl;
+	cout<<"Coloque a expressÃ£o de forma direta. Ex:1+1,33/4..."<<endl;
 	for(int i=0;i<30;i++){
 		cout<<endl<<"Calc"<<i+1<<":";
 		cin>>a[i]>>b[i]>>c[i];
 		
-		//definir as operações
+		//definir as operaÃ§Ãµes
 		if(b[i]=='+'){
 			d[i]=(float)a[i]+(float)c[i];
 		}
@@ -28,9 +31,9 @@ int main()
 		else if(b[i]=='*'){
 			d[i]=(float)(a[i])*(float)(c[i]);
 		}
-		//operação inválida não grava vetor e refaz
+		//operaÃ§Ã£o invÃ¡lida nÃ£o grava vetor e refaz
 		else{
-			cout<<"Operação Inválida";
+			cout<<"OperaÃ§Ã£o InvÃ¡lida";
 			i--;
 			continue;
 		}
