@@ -2,7 +2,7 @@
 #include<iomanip>
 #include <locale.h>
 
-#define quantidadeVendedores 2
+#define quantidadeVendedores 10
 
 using namespace std;
 
@@ -10,8 +10,10 @@ int main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	
-	float codVendedor[quantidadeVendedores],totalVendas[quantidadeVendedores],comissao[quantidadeVendedores],valorReceber[quantidadeVendedores];
+	float codVendedor[quantidadeVendedores],totalVendas[quantidadeVendedores],comissao[quantidadeVendedores],valorReceber[quantidadeVendedores],codVendedorMaior=0,valorAReceberMaior=0,codVendedorMenor=0,valorAReceberMenor=0;
 	
+
+	//captura valores
 	for(int i=0;i<quantidadeVendedores;i++){
 	    cout<<endl<<"Digite o código do Vendedor "<<i+1<<":";
 	    cin>>codVendedor[i];
@@ -20,10 +22,21 @@ int main()
 	    cout<<"Digite a comissão dele(%):";
 	    cin>>comissao[i];
 	    valorReceber[i]=(float)totalVendas[i]*((float)comissao[i]/100);
+
+	    if(valorReceber[i]<valorAReceberMenor || valorAReceberMenor==0){
+			    codVendedorMenor=codVendedor[i];
+			    valorAReceberMenor=valorReceber[i];
+			    }
+			  
+   	    if(valorReceber[i]>valorAReceberMaior || valorAReceberMaior==0){
+			    codVendedorMaior=codVendedor[i];
+			    valorAReceberMaior=valorReceber[i];
+			    }
+
 	}
 	
 	cout<<endl<<"Relatório dos vendedores e vendas:"<<endl;
-	
+	//imprime relatório
 	for(int i=0;i<quantidadeVendedores;i++){
 		cout<<"Cod Vendedor:"<<codVendedor[i]<<endl;
 	    std::fixed;
@@ -31,6 +44,10 @@ int main()
 	    cout<<"Comissão:"<<comissao[i]<<"%"<<endl;
 	    std::fixed;
 	    cout<<"Total Comissão: R$"<<setprecision(5)<<(float)valorReceber[i]<<endl<<endl;
-	}	
+	}
+
+	cout<<endl<<"O vendedor com o código:"<<codVendedorMaior<<" receberá o maior valor, um total de R$"<<valorAReceberMaior;
+	cout<<endl<<"O vendedor com o código:"<<codVendedorMenor<<" receberá o menor valor, um total de R$"<<valorAReceberMenor<<endl;
 	
+	return 0;
 }
