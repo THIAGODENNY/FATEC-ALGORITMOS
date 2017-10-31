@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
   
-  int vetor1[n],vetor2[m],vetorIntersecao[n];
+  int vetor1[n],vetor2[m],vetorInterseccao[n],indiceVetorInterseccao=0;
   
   //entrar com os valores do vetor 01
   for(int i=0;i<n;i++){
@@ -27,6 +27,14 @@ int main()
       cin>>vetor2[i];
   }
   
-  //verificar interseccção*********************************
+  //rotina de verificação de intersecção
+  for(int i=0;i<n;i++){
+      for(int j=0,bool igual=false;i<m && igual=false;j++){
+          if(vetor1[i]==vetor2[j]){
+              vetorInterseccao[indiceVetorInterseccao]=vetor1[i];
+              indiceVetorInterseccao++;
+              igual=true;
+          }
+      }
   
 }
