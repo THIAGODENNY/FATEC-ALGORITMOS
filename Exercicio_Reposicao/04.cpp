@@ -7,13 +7,25 @@ adequada.*/
 
 using namespace std;
 
-#define n 15
-#define m 25
+#define n 5
+#define m 7
 
 int main()
 {
   
-  int vetor1[n],vetor2[m],vetorInterseccao[n],indiceVetorInterseccao=0;
+  int vetor1[n],vetor2[m],vetorInterseccao[n],indiceVetorInterseccao=0,j=0;
+  bool igual=false;
+
+  //zerar vetores com indice n de tamanho
+  for(int i=0;i<n;i++){
+	  vetor1[i]=0;
+	  vetorInterseccao[i]=0;
+  }
+
+  //zerar vetores com indice m de tamanho
+  for(int i=0;i<m;i++){
+	  vetor2[i]=0;
+  }
   
   //entrar com os valores do vetor 01
   for(int i=0;i<n;i++){
@@ -29,12 +41,33 @@ int main()
   
   //rotina de verificação de intersecção
   for(int i=0;i<n;i++){
-      for(int j=0,bool igual=false;i<m && igual=false;j++){
-          if(vetor1[i]==vetor2[j]){
-              vetorInterseccao[indiceVetorInterseccao]=vetor1[i];
-              indiceVetorInterseccao++;
-              igual=true;
-          }
-      }
+	  //reset memorórias auxiliares para verificação;
+	  j=0;
+	  igual=false;
+	  
+	  if(vetor1[n]==vetor2[j]){
+	  igual=true;
+	  }
+
+	  //for para evitar de gravar-se duas vezes o mesmo valor de intersecção
+	  for(int i=0;i<m;i++){
+		  if(vetor1[i]==vetorInterseccao[i]){
+			  igual=false;
+		  }
+	  }
+	  //se valor não gravado anteriormente gravar
+	  if(igual){
+	  vetorInterseccao[indiceVetorInterseccao]=vetor1[i];
+	  indiceVetorInterseccao++;
+	  }
+  }
+
+  //rotina para impressão dos valores de vetores
   
+  for(int i=0;i<n;i++){
+	  cout<<vetorInterseccao[i]<<endl;
+  }  
 }
+	  
+		  
+	  
