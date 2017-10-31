@@ -1,4 +1,4 @@
-/*Escrever um programa para ler dois vetores de inteiros, de ordem n e m respectivamente (n  15 e m  25). Calcular o vetor
+/*Escrever um programa para ler dois vetores de inteiros, de ordem n e m respectivamente (n = 15 e m =25). Calcular o vetor
 interseção dos dois vetores dados, imprimido os três vetores. Se não houver a interseção, imprimir uma mensagem explicativa
 adequada.*/
 
