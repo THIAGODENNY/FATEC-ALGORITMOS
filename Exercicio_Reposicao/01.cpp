@@ -1,3 +1,13 @@
+/*Ler três vetores de n elementos cada um (n < 30) organizados da seguinte forma:
+- O primeiro e o terceiro são vetores de elementos reais;
+- O segundo vetor é de caracteres e deve conter os símbolos que representam as operações aritméticas básicas ( *, /, +, -).
+- O primeiro e o terceiro vetor serão operados aritmeticamente de acordo com as operações existentes no segundo vetor, criando
+um novo vetor, conforme exemplo a seguir:
+A = (1,3,5,7,9) B = ('* ', '/ ', '- ','+ ', '* ') C = (-2, 4, -5, 3, 6)
+D = (-2, 0.75, 10, 10, 54) ( elementos do vetor A operados com elementos do vetor B)
+Imprimir os quatro vetores.
+*/
+
 #include<iostream>
 #include<iomanip>
 #include <locale.h>
