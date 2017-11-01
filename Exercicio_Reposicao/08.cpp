@@ -1,4 +1,4 @@
-/*Escrever um programa para ler um vetor de n elementos do tipo inteiro (n  20) e ordenar seus elementos em ordem crescente e
+/*Escrever um programa para ler um vetor de n elementos do tipo inteiro (n <= 20) e ordenar seus elementos em ordem crescente e
 decrescente. Imprimir o vetor antes e após a ordenação.*/
 
 #include<iostream>
