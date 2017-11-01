@@ -1,3 +1,11 @@
+/*Faça um programa que receba o total das vendas de cada vendedor e armazene-as em um vetor. Receba também o percentual de
+comissão de cada vendedor e armazene-as em outro vetor. Receba os códigos desses vendedores e armazene-os em um terceiro
+vetor. Existem apenas 10 vendedores. Calcule e mostre:
+a. Um relatório com os códigos dos vendedores e os valores a receber
+b. O total das vendas
+c. O maior valor a receber e quem o receberá
+d. O menor valor a receber e quem o receberá*/
+
 #include<iostream>
 #include<iomanip>
 #include <locale.h>
