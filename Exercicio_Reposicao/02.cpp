@@ -1,3 +1,6 @@
+/*Faça um programa que carregue um vetor com 15 elementos inteiros e verifique a existência de elementos iguais a 30, mostrando
+as posições em que esses elementos apareceram.*/
+
 #include<iostream>
 #include<iomanip>
 #include <locale.h>
@@ -25,7 +28,7 @@ int main()
 	}
 
 	if(elemento_30_encontrado==false){
-		cout<<"Nenhum n�mero 30 foi encontrado";
+		cout<<"Nenhum número 30 foi encontrado";
 	}
 
 	cout<<endl;
