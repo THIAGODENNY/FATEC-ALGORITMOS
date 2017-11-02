@@ -29,7 +29,7 @@ int main()
 		cout<<"Vetor 1,"<<i+1<<":";
 		cin>>vetor[i];
 
-		//verifica se foi digitado na entrada que não for int, causando um erro no programa e pede para a inserção do valor novamente
+		//verifica falha na captura de valor de vetor, se sim executa uma nova tentativa até o dado ser válido e não causar um crash no programa
 		while (cin.fail())  
 		{
 			cout<<"Caracter digitado inválido. Digite novamente o vetor 1,"<<i+1<<":";  
