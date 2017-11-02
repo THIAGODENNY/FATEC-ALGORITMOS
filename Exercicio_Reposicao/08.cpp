@@ -27,15 +27,15 @@ int main()
 	//capturando dados
 	for(int i=0;i<n;i++){
 		cout<<"Vetor 1,"<<i+1<<":";
-			cin>>vetor[i];
+		cin>>vetor[i];
 
 		//verifica se foi digitado na entrada que não for int, causando um erro no programa e pede para a inserção do valor novamente
 		while (cin.fail())  
 		{
 			cout<<"Caracter digitado inválido. Digite novamente o vetor 1,"<<i+1<<":";  
-				cin.clear();   				//limpa istream
-				cin.ignore();  				//repara istream
-				cin >> vetor[i]; 			//executa novamente a captura de dados
+			cin.clear();   				//limpa istream
+			cin.ignore();  				//repara istream
+			cin >> vetor[i]; 			//executa novamente a captura de dados
 		}
 		
 		//copia os valores para vetor crescente e decrescente
